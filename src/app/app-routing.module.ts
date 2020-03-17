@@ -20,7 +20,7 @@ const routes: Routes = [
     component: PageBookListComponent
   },
   {
-    path: 'book-details',
+    path: 'book-details/:isbn',
     component: PageBookDetailsComponent
   }
 ];

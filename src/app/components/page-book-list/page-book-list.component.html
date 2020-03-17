@@ -6,15 +6,25 @@
     <tr>
       <th>Book Name</th>
       <th>Author</th>
+      <th>Publish date</th>
       <th>Price</th>
     </tr>
   </thead>
 
   <tbody>
-    <tr>
-      <td>Alvin</td>
-      <td>Eclair</td>
-      <td>$0.87</td>
+    <tr *ngFor="let book of myArray" [class.red-text]="!book.available">
+      <td>{{ book.name }}</td>
+      <td>{{ book.author | uppercase }}</td>
+      <td>
+        <!-- TODO :  Add the date filter
+          <i *ngIf="book.publishedDate" class="red-text fab fa-hotjar"></i>
+        -->
+        {{ book.publishedDate }}
+      </td>
+      <td>
+        <!-- https://angular.io/api/common/NgIf -->
+        <span *ngIf="book.available">{{ book.price | currency : "EUR":true }}</span>
+      </td>
     </tr>
   </tbody>
 </table>
