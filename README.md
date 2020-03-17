@@ -1,27 +1,66 @@
-# BookStore
+# Stacks
+Difference btw lamp and mean stack
+Amazon vs Youtube custom components
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+# Setup
+## installing NodeJS from website
+## Check installed with
+node -v
+npm -v
 
-## Development server
+## Installing Angular with the command line
+npm install -g @angular/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## if pbm with installation policy
+Set-ExecutionPolicy Unrestricted
 
-## Code scaffolding
+## if MacOS
+sudo npm install -g @angular/cli
+[enter your password]
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Checking with
+ng version
 
-## Build
+# Create an Angular Project
+Shift + right-click to open powershell in a folder
+ng new book-store
+Routing Yes
+Styling CSS
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## To open the project in VSCode
+cd book-store
+code . [if you installed vscode in th PATH]
 
-## Running unit tests
+## Explaination of the differents files / folders
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Launch the local server
+ng serve -o
 
-## Running end-to-end tests
+## Simplify the app.component.html
+<!-- line 333 -->
+<span> {{ title }} app is running!</span>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<!-- last line -->
+<router-outlet></router-outlet>
 
-## Further help
+## Generate new components
+ng generate component name-of-the-component
+ng g c components/nav-bar
+ng g c components/page-book-details
+ng g c components/page-book-list
+ng g c components/page-dashboard
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Handle the routing
+---- Lunch Break ----
+## Create the navbar and the links
+## CSS Framework
+## Data access creation
+## List *ngFor
+## download Angular Language Service
+## Available ? ngIf
+## Categories Colors
+
+## Details page
+update to add a param isbn to the url
+Catch the param on the component using promise
+Filter the array to get the specified book
