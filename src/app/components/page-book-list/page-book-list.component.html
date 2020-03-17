@@ -13,7 +13,12 @@
 
   <tbody>
     <tr *ngFor="let book of myArray" [class.red-text]="!book.available">
-      <td>{{ book.name }}</td>
+      <td>
+        <!-- Link to the details page for the given ISBN -->
+        <a [routerLink]="['/book-details', book.isbn]">
+          {{ book.name }}
+        </a>
+      </td>
       <td>{{ book.author | uppercase }}</td>
       <td>
         <!-- TODO :  Add the date filter
