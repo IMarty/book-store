@@ -9,6 +9,8 @@ import { PageBookListComponent } from './components/page-book-list/page-book-lis
 import { PageBookDetailsComponent } from './components/page-book-details/page-book-details.component';
 import { KpiCardComponent } from './components/kpi-card/kpi-card.component';
 
+import { FormsModule } from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { KpiCardComponent } from './components/kpi-card/kpi-card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
