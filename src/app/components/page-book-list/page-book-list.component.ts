@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BooksArray } from "../../services/fakeData";
+import { BookService } from "../../services/book.service";
 @Component({
   selector: 'app-page-book-list',
   templateUrl: './page-book-list.component.html',
@@ -7,12 +7,14 @@ import { BooksArray } from "../../services/fakeData";
 })
 export class PageBookListComponent implements OnInit {
 
-  // 20min  Break -> 15h40
-  myArray = BooksArray;
-  constructor() { }
+
+  myArray = [];
+  constructor(private bookS: BookService) { }
 
   ngOnInit(): void {
+    this.myArray = this.bookS.getAllBooks();
   }
 
 }
+// See you at 11h10
 
