@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BooksArray } from "./fakeData";
+import { Book } from '../model/book';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,30 +9,30 @@ export class BookService {
   myBooks = BooksArray;
   constructor() { }
 
-  getAllBooks() {
+  getAllBooks(): Book[] {
     return this.myBooks;
   }
 
-  getOneBookByISBN(givenISBN) {
+  getOneBookByISBN(givenISBN: number): Book {
     return this.myBooks.filter(book => book.isbn === givenISBN)[0];
   }
 
   // filter on all the book unavaible
-  getUnavailableBooks() {
+  getUnavailableBooks(): Book[] {
     return this.myBooks.filter(book => !book.available);
   }
 
   // length of the previous array
-  nbUnavailable() {
+  nbUnavailable(): number {
     return this.getUnavailableBooks().length;
   }
 
   // length of the previous array
-  nbAllBooks() {
+  nbAllBooks(): number {
     return this.myBooks.length;
   }
 
-  nbAvailable() {
+  nbAvailable(): number {
     return this.myBooks.filter(book => book.available).length;
   }
   //due at 10h30
