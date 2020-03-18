@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class KpiCardComponent implements OnInit {
   @Input() title;
   @Input() color;
+  @Input() number;
 
   constructor() { }
 
