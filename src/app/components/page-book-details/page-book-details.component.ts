@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // this is the city hall
 import { ActivatedRoute } from '@angular/router';
 import { BookService } from "../../services/book.service";
+import { Book } from '../../model/book';
 
 @Component({
   selector: 'app-page-book-details',
@@ -9,7 +10,7 @@ import { BookService } from "../../services/book.service";
   styleUrls: ['./page-book-details.component.css']
 })
 export class PageBookDetailsComponent implements OnInit {
-  mySpecificProduct;
+  mySpecificProduct: Book;
 
   // your room contains a phone to get the city hall
   constructor(private route: ActivatedRoute, private bs: BookService) { }
