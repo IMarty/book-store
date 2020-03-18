@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PageDashboardComponent } from './components/page-dashboard/page-dashboard.component';
 import { PageBookListComponent } from './components/page-book-list/page-book-list.component';
 import { PageBookDetailsComponent } from './components/page-book-details/page-book-details.component';
+import { KpiCardComponent } from './components/kpi-card/kpi-card.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PageBookDetailsComponent } from './components/page-book-details/page-bo
     NavBarComponent,
     PageDashboardComponent,
     PageBookListComponent,
-    PageBookDetailsComponent
+    PageBookDetailsComponent,
+    KpiCardComponent
   ],
   imports: [
     BrowserModule,

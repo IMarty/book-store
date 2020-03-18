@@ -126,4 +126,21 @@ Controller (Service) Acces/Create/Modify/Delete the datas
 - nbAllBooks() - length of the previous array
 
 ## Dashboard
-Contains Computed value
+Contains the list of unavaible book
+this list comes from the service
+and is shown inside the html thanks to the *ngFor directive
+
+# Usual process
+0. API
+1. service create the function that return the data
+2. create the component : ng g c component-name
+3. handle the routing (path.. inside the app-routing)
+4. use the data on a component (*ngFor) by calling the service
+
+## Card child component
+Part of the UI repetitive but change base on data
+create a component
+send the data the that children component
+type: "book" or "unavailable"
+color: red or blue
+number : 123456789
