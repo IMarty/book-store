@@ -7,4 +7,5 @@ export interface Book {
   publishedDate: string;
   ageLimite: number;
   isbn: number;
+  cover: string
 }

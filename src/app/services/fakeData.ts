@@ -7,7 +7,8 @@ export const BooksArray = [
     price: 1,
     publishedDate: '16/02/2020',
     ageLimite: 18,
-    isbn: 9782072705242
+    isbn: 9782072705242,
+    cover: 'https://picsum.photos/200'
   },
   {
     name: "I am a different book",
@@ -17,7 +18,8 @@ export const BooksArray = [
     price: 2,
     publishedDate: '21/02/2020',
     ageLimite: 19,
-    isbn: 9782072705243
+    isbn: 9782072705243,
+    cover: 'https://picsum.photos/200'
   },
   {
     name: "Win Billion at Home during Crysis",
@@ -27,7 +29,8 @@ export const BooksArray = [
     price: 500,
     publishedDate: '06/03/2020',
     ageLimite: 0,
-    isbn: 9782072705244
+    isbn: 9782072705244,
+    cover: 'https://picsum.photos/200'
   },
   {
     name: "Learn French with my wife",
@@ -37,6 +40,7 @@ export const BooksArray = [
     price: 10,
     publishedDate: '10/03/2020',
     ageLimite: 21,
-    isbn: 9782072705245
+    isbn: 9782072705245,
+    cover: 'https://picsum.photos/200'
   },
 ]
