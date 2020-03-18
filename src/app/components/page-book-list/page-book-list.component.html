@@ -19,11 +19,10 @@
           {{ book.name }}
         </a>
       </td>
-      <td>{{ book.author | uppercase }}</td>
+      <td (click)="changeAvailability(book)">
+        {{ book.author | uppercase }}
+      </td>
       <td>
-        <!-- TODO :  Add the date filter
-          <i *ngIf="book.publishedDate" class="red-text fab fa-hotjar"></i>
-        -->
         {{ book.publishedDate }}
       </td>
       <td>

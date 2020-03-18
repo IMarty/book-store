@@ -19,5 +19,7 @@ export class PageDashboardComponent implements OnInit {
     this.nbB = this.bookS.nbAllBooks();
     this.nbA = this.bookS.nbAvailable();
   }
-
+  clickh2() {
+    alert('h2  clicked!');
+  }
 }

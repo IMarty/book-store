@@ -15,6 +15,9 @@ export class PageBookListComponent implements OnInit {
     this.myArray = this.bookS.getAllBooks();
   }
 
+  changeAvailability(book) {
+    book.available = !book.available;
+  }
 }
 // See you at 11h10
 

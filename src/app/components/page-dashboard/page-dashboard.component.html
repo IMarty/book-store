@@ -17,13 +17,13 @@
 
   <!-- Your work : NB Available books -->
   <div class="col s4">
-    <app-kpi-card title="Unavailable" color="green" number="{{nbA}}">
+    <app-kpi-card title="Available" color="green" number="{{nbA}}">
     </app-kpi-card>
   </div>
 </div>
 
 
-<h2>Unavailable Book</h2>
+<h2 (click)="clickh2()">Unavailable Book</h2>
 <!-- list of all unavaible books -->
 <ul class="collection">
   <li class="collection-item" *ngFor="let book of unavailableBook">
