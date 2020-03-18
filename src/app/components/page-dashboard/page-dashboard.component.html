@@ -3,19 +3,23 @@
 <!-- child component -->
 <div class="row">
   <!-- NB books -->
-  <div class="col s6">
+  <div class="col s4">
     <app-kpi-card title="Books" color="blue" number="{{nbB}}">
 
     </app-kpi-card>
   </div>
 
   <!-- NB unavailable books -->
-  <div class="col s6">
+  <div class="col s4">
     <app-kpi-card title="Unavailable" color="red" number="{{nbU}}">
     </app-kpi-card>
   </div>
 
   <!-- Your work : NB Available books -->
+  <div class="col s4">
+    <app-kpi-card title="Unavailable" color="green" number="{{nbA}}">
+    </app-kpi-card>
+  </div>
 </div>
 
 

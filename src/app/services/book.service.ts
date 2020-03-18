@@ -30,5 +30,9 @@ export class BookService {
   nbAllBooks() {
     return this.myBooks.length;
   }
+
+  nbAvailable() {
+    return this.myBooks.filter(book => book.available).length;
+  }
   //due at 10h30
 }

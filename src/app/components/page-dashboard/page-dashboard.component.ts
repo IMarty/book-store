@@ -10,12 +10,14 @@ export class PageDashboardComponent implements OnInit {
   unavailableBook = [];
   nbU;
   nbB;
+  nbA;
   constructor(private bookS: BookService) { }
 
   ngOnInit(): void {
     this.unavailableBook = this.bookS.getUnavailableBooks();
     this.nbU = this.bookS.nbUnavailable();
     this.nbB = this.bookS.nbAllBooks();
+    this.nbA = this.bookS.nbAvailable();
   }
 
 }
