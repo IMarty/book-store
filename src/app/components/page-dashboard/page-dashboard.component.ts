@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-page-dashboard',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-dashboard.component.css']
 })
 export class PageDashboardComponent implements OnInit {
-
-  constructor() { }
+  unavailableBook = [];
+  constructor(private bookS: BookService) { }
 
   ngOnInit(): void {
+    this.unavailableBook = this.bookS.getUnavailableBooks();
   }
 
 }

@@ -1,1 +1,35 @@
-<p>page-dashboard works!</p>
+<h1>Dashboard</h1>
+<h2>KPI</h2>
+<!-- child component -->
+<div class="row">
+  <!-- NB books -->
+  <div class="col s12 m6">
+    <div class="card blue darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Books</span>
+        <p>6</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NB unavailable books -->
+  <div class="col s12 m6">
+    <div class="card red darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">Unavailable</span>
+        <p>2</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<h2>Unavailable Book</h2>
+<!-- list of all unavaible books -->
+<ul class="collection">
+  <li class="collection-item" *ngFor="let book of unavailableBook">
+    {{book.name}}
+    <em>, written by : </em>
+    {{ book.author }}
+  </li>
+</ul>
