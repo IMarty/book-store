@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/model/book';
 import { BookService } from 'src/app/services/book.service';
+import { Router } from '@angular/router';
 
 declare const M;
 
@@ -11,7 +12,8 @@ declare const M;
 })
 export class PageNewBookComponent implements OnInit {
   currentBook: Book;
-  constructor(private bs: BookService) {
+  constructor(private bs: BookService,
+    private router: Router) {
     this.currentBook = {
       name: null,
       author: null,
@@ -32,5 +34,6 @@ export class PageNewBookComponent implements OnInit {
   addBookCliked() {
     console.log(this.currentBook);
     this.bs.addNewBook(this.currentBook);
+    this.router.navigate(['/book-details', this.currentBook.isbn]);
   }
 }
