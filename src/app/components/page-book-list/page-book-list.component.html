@@ -4,10 +4,13 @@
 <table class="highlight">
   <thead>
     <tr>
-      <th>Book Name</th>
-      <th>Author</th>
+      <th [class.selected]="selectedFilter === 'name'" (click)="orderName()">Book Name</th>
+
+      <th [class.selected]="selectedFilter === 'author'" (click)="orderAuthor()">Author</th>
+
       <th>Publish date</th>
-      <th>Price</th>
+
+      <th [class.selected]="selectedFilter === 'price'" (click)="orderPrice()">Price</th>
     </tr>
   </thead>
 
