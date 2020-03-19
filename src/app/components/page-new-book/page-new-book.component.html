@@ -3,41 +3,42 @@
 <!-- https://materializecss.com/text-inputs.html -->
 <div class="row">
   <div class="input-field col s6">
-    <input placeholder="Book Name" id="book_name" type="text">
+    <input placeholder="Book Name" id="book_name" [(ngModel)]="currentBook.name" type="text">
     <label for="book_name">Book Name</label>
   </div>
   <div class="input-field col s6">
-    <input id="author" placeholder="Author" type="text">
+    <input id="author" placeholder="Author" [(ngModel)]="currentBook.author" type="text">
     <label for="author">Author</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s6">
-    <input placeholder="category" id="category" type="text">
+    <input placeholder="category" id="category" [(ngModel)]="currentBook.category" type="text">
     <label for="category">Category</label>
   </div>
   <div class="input-field col s6">
-    <input id="publish_date" placeholder="16/03/2020" type="text" class="datepicker">
+    <input id="publish_date" placeholder="16/03/2020" [(ngModel)]="currentBook.publishedDate" type="text"
+      class="datepicker">
     <label for="publish_date">Publish date</label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s6">
-    <input placeholder="0" id="age_limit" type="number">
+    <input placeholder="0" id="age_limit" [(ngModel)]="currentBook.ageLimite" type="number">
     <label for="age_limit">Age Limit</label>
   </div>
   <div class="input-field col s6">
-    <input id="price" placeholder="10" type="number">
+    <input id="price" placeholder="10" [(ngModel)]="currentBook.price" type="number">
     <label for="price">Price </label>
   </div>
 </div>
 <div class="row">
   <div class="input-field col s6">
-    <input placeholder="0" id="isbn" type="number">
+    <input placeholder="0" id="isbn" [(ngModel)]="currentBook.isbn" type="number">
     <label for="isbn">ISBN</label>
   </div>
   <div class="input-field col s6">
-    <input id="cover" placeholder="http://..." type="url">
+    <input id="cover" [(ngModel)]="currentBook.cover" placeholder="http://..." type="url">
     <label for="cover">Cover</label>
   </div>
 </div>
@@ -47,5 +48,3 @@
     <i class="fas fa-plus"></i> Add the Book
   </button>
 </div>
-
-<!-- Break, back at 11h10 -->
