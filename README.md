@@ -176,3 +176,5 @@ create a link in the page list books
   </a>
 </div>
 
+## 4 - Modifying component TS/HTML
+
