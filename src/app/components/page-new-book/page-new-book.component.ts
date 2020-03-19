@@ -14,7 +14,8 @@ export class PageNewBookComponent implements OnInit {
   ngOnInit(): void {
     var elems = document.querySelectorAll('#publish_date');
     var instances = M.Datepicker.init(elems);
-
   }
-
+  addBookCliked() {
+    alert('clicked');
+  }
 }
