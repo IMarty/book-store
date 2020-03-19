@@ -10,6 +10,7 @@ import { PageBookDetailsComponent } from './components/page-book-details/page-bo
 import { KpiCardComponent } from './components/kpi-card/kpi-card.component';
 
 import { FormsModule } from "@angular/forms";
+import { PageNewBookComponent } from './components/page-new-book/page-new-book.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from "@angular/forms";
     PageDashboardComponent,
     PageBookListComponent,
     PageBookDetailsComponent,
-    KpiCardComponent
+    KpiCardComponent,
+    PageNewBookComponent
   ],
   imports: [
     BrowserModule,

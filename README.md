@@ -132,9 +132,9 @@ and is shown inside the html thanks to the *ngFor directive
 
 # Usual process
 0. API
-1. service create the function that return the data
-2. create the component : ng g c component-name
-3. handle the routing (path.. inside the app-routing)
+1. SERVICE create the function that return the data
+2. create the COMPONENT : ng g c component-name
+3. handle the ROUTING (path.. inside the app-routing)
 4. use the data on a component (*ngFor) by calling the service
 
 ## Card child component
@@ -144,3 +144,35 @@ send the data the that children component
 type: "book" or "unavailable"
 color: red or blue
 number : 123456789
+
+---- 19/03/2020 ----
+# Add new data
+## 0 - API
+not for today's course
+
+## 1 - Service
+Inside bookService :
+`
+addNewBook(book: Book) {
+  this.myBooks.push(book);
+}
+`
+
+## 2 - Create the new components
+ng g c components/page-new-book
+
+## 3 - Routing + Links
+inside the Routes of the app-routing module
+
+{
+  path:'add',
+  component:PageNewBookComponent
+}
+
+create a link in the page list books
+<div class="fixed-action-btn">
+  <a [routerLink]="['/add']" class="btn-floating btn-large red">
+    <i class="fas fa-plus"></i>
+  </a>
+</div>
+

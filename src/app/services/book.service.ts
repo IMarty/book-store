@@ -12,9 +12,7 @@ export class BookService {
   getAllBooks(): Book[] {
     return this.myBooks;
   }
-  save() {
-    localStorage.setItem('myBooks', JSON.stringify(this.myBooks))
-  }
+
   getOneBookByISBN(givenISBN: number): Book {
     return this.myBooks.filter(book => book.isbn === givenISBN)[0];
   }
@@ -37,5 +35,8 @@ export class BookService {
   nbAvailable(): number {
     return this.myBooks.filter(book => book.available).length;
   }
-  //due at 10h30
+
+  addNewBook(book: Book) {
+    this.myBooks.push(book);
+  }
 }

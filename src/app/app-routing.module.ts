@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageDashboardComponent } from './components/page-dashboard/page-dashboard.component';
 import { PageBookListComponent } from './components/page-book-list/page-book-list.component';
 import { PageBookDetailsComponent } from './components/page-book-details/page-book-details.component';
+import { PageNewBookComponent } from './components/page-new-book/page-new-book.component';
+
 
 
 const routes: Routes = [
@@ -22,6 +24,10 @@ const routes: Routes = [
   {
     path: 'book-details/:isbn',
     component: PageBookDetailsComponent
+  },
+  {
+    path: 'add',
+    component: PageNewBookComponent
   }
 ];
 
