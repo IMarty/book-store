@@ -114,7 +114,7 @@ Apply the class red-text if the test return "true"
 Local Code -> Github (with some folder) -> Netlify (listen for change) "Build" -> Deploy
 
 ## Creation of the Service
-
+ng g service services/book
 (Model is the data structure to respect)
 View (component) not touching the datas - just show
 Controller (Service) Acces/Create/Modify/Delete the datas
