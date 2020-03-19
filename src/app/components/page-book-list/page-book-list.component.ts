@@ -30,7 +30,13 @@ export class PageBookListComponent implements OnInit {
     this.selectedFilter = 'author';
   }
   orderPrice() {
-    this.myArray = (new Utils()).sortNumber(this.myArray, "price", 1);
+    this.myArray = this.myArray.sort((a, b) => {
+      // Use toUpperCase() to ignore character casing
+      const numberA = a.price;
+      const numberB = b.price;
+      return numberA - numberB;
+    });
+
     this.selectedFilter = 'price';
   }
 }
