@@ -1,7 +1,16 @@
 <!-- Nav Bar -->
-<app-nav-bar></app-nav-bar>
+<app-nav-bar [class.dark]="darkmode"></app-nav-bar>
 
-<div class="container">
+<div class="container" [class.dark]="darkmode">
   <!-- last line - Injecting the good components based on the routing -->
   <router-outlet></router-outlet>
+</div>
+
+
+<div class="switch">
+  <label>
+    Darkmode
+    <input [(ngModel)]="darkmode" name="dark" type="checkbox">
+    <span class="lever"></span>
+  </label>
 </div>
