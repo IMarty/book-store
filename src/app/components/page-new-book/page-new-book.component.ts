@@ -11,20 +11,10 @@ declare const M;
   styleUrls: ['./page-new-book.component.css']
 })
 export class PageNewBookComponent implements OnInit {
-  currentBook: Book;
+  currentBook = <Book>{}; // initialize the main object ! (thanks Andrès !)
   constructor(private bs: BookService,
     private router: Router) {
-    this.currentBook = {
-      name: null,
-      author: null,
-      category: null,
-      publishedDate: null,
-      ageLimite: null,
-      price: null,
-      isbn: null,
-      cover: null,
-      available: true
-    };
+
   }
 
   ngOnInit(): void {
@@ -37,3 +27,5 @@ export class PageNewBookComponent implements OnInit {
     this.router.navigate(['/book-details', this.currentBook.isbn]);
   }
 }
+
+// start thinking about a personnal project were you handle a list of stuff
