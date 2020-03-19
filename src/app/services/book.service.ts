@@ -12,7 +12,9 @@ export class BookService {
   getAllBooks(): Book[] {
     return this.myBooks;
   }
-
+  save() {
+    localStorage.setItem('myBooks', JSON.stringify(this.myBooks))
+  }
   getOneBookByISBN(givenISBN: number): Book {
     return this.myBooks.filter(book => book.isbn === givenISBN)[0];
   }

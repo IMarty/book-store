@@ -23,7 +23,7 @@ import { FormsModule } from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule // Contains the [(ngModel)], two way data binding (Script <-> HTML)
   ],
   providers: [],
   bootstrap: [AppComponent]
